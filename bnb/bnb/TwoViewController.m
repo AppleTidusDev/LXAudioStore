@@ -196,6 +196,12 @@
     onebutton.titleLabel.textAlignment = NSTextAlignmentCenter;//设置title的字体居中
     [onebutton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];//设置title在一般情况下为白色字体
     
+    
+    
+    
+    
+    
+    
     [onebutton addTarget:self action:@selector(tap) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *twobutton = [UIButton buttonWithType:UIButtonTypeCustom];//button的类型
