@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>id</key>
+		<string>1</string>
+		<key>wordsP</key>
+		<string>word.png</string>
+		<key>readingP</key>
+		<string>Reading.png</string>
+		<key>words</key>
+		<string>89</string>
+		<key>reading</key>
+		<string>901</string>
+		<key>title</key>
+		<string>千元级蓝牙耳机最强音</string>
+		<key>text</key>
+		<string>看哈双方科技啊还是咖啡哈萨克解放后 i 哦大护肤 i 不到韩剧啊 u 哦 v 份 v 却佛 v 三次把自己看 v 哦 i 爱不怕堵啊不胜负荷就是 v 阿富汗尽快啦山洪暴发卡还是老客户</string>
+		<key>product</key>
+		<string>蓝弦新品A.png</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>2</string>
+		<key>wordsP</key>
+		<string>word.png</string>
+		<key>readingP</key>
+		<string>Reading.png</string>
+		<key>words</key>
+		<string>123</string>
+		<key>reading</key>
+		<string>290</string>
+		<key>title</key>
+		<string>阿姐广发卡舒服</string>
+		<key>text</key>
+		<string>ashfjhavsjhvuzxcakjsgfiuagsfjbqojkladsadafzxvwfasf阿萨德撒大发舒服啊舒服啊舒服</string>
+		<key>product</key>
+		<string>蓝弦新品A.png</string>
+		<key>CFBundleGetInfoString</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>3</integer>
+		<key>wordsP</key>
+		<string>word.png</string>
+		<key>readingP</key>
+		<string>Reading.png</string>
+		<key>words</key>
+		<string>38</string>
+		<key>reading</key>
+		<string>569</string>
+		<key>title</key>
+		<string>如何打造一款出色的耳机？</string>
+		<key>text</key>
+		<string>kajsfklahkfjhaksjfhkajsfafgkjashfiuasiucgjhdvifajhfgjasgflkaifquwflgamfkjshvcxcv</string>
+		<key>product</key>
+		<string>蓝弦新品A.png</string>
+	</dict>
+</array>
+</plist>

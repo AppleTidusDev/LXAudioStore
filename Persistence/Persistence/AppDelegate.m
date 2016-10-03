@@ -1,9 +1,9 @@
 //
 //  AppDelegate.m
-//  Demo
+//  Persistence
 //
-//  Created by 谭 卓勋 on 15/7/26.
-//  Copyright (c) 2015年 Tidus. All rights reserved.
+//  Created by 谭 卓勋 on 16/9/2.
+//  Copyright (c) 2016年 Tidus. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -17,7 +17,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    NSLog(@"hello world");
     return YES;
 }
 
@@ -41,11 +40,6 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-}
-
-- (void)showMainView {
-
-
 }
 
 @end

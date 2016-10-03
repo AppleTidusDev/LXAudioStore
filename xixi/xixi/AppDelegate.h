@@ -1,9 +1,9 @@
 //
 //  AppDelegate.h
-//  Demo
+//  xixi
 //
-//  Created by 谭 卓勋 on 15/7/26.
-//  Copyright (c) 2015年 Tidus. All rights reserved.
+//  Created by 谭 卓勋 on 16/9/8.
+//  Copyright (c) 2016年 Tidus. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -12,7 +12,6 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-- (void)showMainView;
 
 @end
 
