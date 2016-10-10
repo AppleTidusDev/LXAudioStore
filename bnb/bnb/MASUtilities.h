@@ -1,9 +1,9 @@
 //
 //  MASUtilities.h
-//  bnb
+//  Masonry
 //
-//  Created by 谭 卓勋 on 16/9/28.
-//  Copyright (c) 2016年 Tidus. All rights reserved.
+//  Created by Jonas Budelmann on 19/08/13.
+//  Copyright (c) 2013 Jonas Budelmann. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -12,33 +12,33 @@
 
 #if TARGET_OS_IPHONE || TARGET_OS_TV
 
-#import <UIKit/UIKit.h>
-#define MAS_VIEW UIView
-#define MAS_VIEW_CONTROLLER UIViewController
-#define MASEdgeInsets UIEdgeInsets
+    #import <UIKit/UIKit.h>
+    #define MAS_VIEW UIView
+    #define MAS_VIEW_CONTROLLER UIViewController
+    #define MASEdgeInsets UIEdgeInsets
 
-typedef UILayoutPriority MASLayoutPriority;
-static const MASLayoutPriority MASLayoutPriorityRequired = UILayoutPriorityRequired;
-static const MASLayoutPriority MASLayoutPriorityDefaultHigh = UILayoutPriorityDefaultHigh;
-static const MASLayoutPriority MASLayoutPriorityDefaultMedium = 500;
-static const MASLayoutPriority MASLayoutPriorityDefaultLow = UILayoutPriorityDefaultLow;
-static const MASLayoutPriority MASLayoutPriorityFittingSizeLevel = UILayoutPriorityFittingSizeLevel;
+    typedef UILayoutPriority MASLayoutPriority;
+    static const MASLayoutPriority MASLayoutPriorityRequired = UILayoutPriorityRequired;
+    static const MASLayoutPriority MASLayoutPriorityDefaultHigh = UILayoutPriorityDefaultHigh;
+    static const MASLayoutPriority MASLayoutPriorityDefaultMedium = 500;
+    static const MASLayoutPriority MASLayoutPriorityDefaultLow = UILayoutPriorityDefaultLow;
+    static const MASLayoutPriority MASLayoutPriorityFittingSizeLevel = UILayoutPriorityFittingSizeLevel;
 
 #elif TARGET_OS_MAC
 
-#import <AppKit/AppKit.h>
-#define MAS_VIEW NSView
-#define MASEdgeInsets NSEdgeInsets
+    #import <AppKit/AppKit.h>
+    #define MAS_VIEW NSView
+    #define MASEdgeInsets NSEdgeInsets
 
-typedef NSLayoutPriority MASLayoutPriority;
-static const MASLayoutPriority MASLayoutPriorityRequired = NSLayoutPriorityRequired;
-static const MASLayoutPriority MASLayoutPriorityDefaultHigh = NSLayoutPriorityDefaultHigh;
-static const MASLayoutPriority MASLayoutPriorityDragThatCanResizeWindow = NSLayoutPriorityDragThatCanResizeWindow;
-static const MASLayoutPriority MASLayoutPriorityDefaultMedium = 501;
-static const MASLayoutPriority MASLayoutPriorityWindowSizeStayPut = NSLayoutPriorityWindowSizeStayPut;
-static const MASLayoutPriority MASLayoutPriorityDragThatCannotResizeWindow = NSLayoutPriorityDragThatCannotResizeWindow;
-static const MASLayoutPriority MASLayoutPriorityDefaultLow = NSLayoutPriorityDefaultLow;
-static const MASLayoutPriority MASLayoutPriorityFittingSizeCompression = NSLayoutPriorityFittingSizeCompression;
+    typedef NSLayoutPriority MASLayoutPriority;
+    static const MASLayoutPriority MASLayoutPriorityRequired = NSLayoutPriorityRequired;
+    static const MASLayoutPriority MASLayoutPriorityDefaultHigh = NSLayoutPriorityDefaultHigh;
+    static const MASLayoutPriority MASLayoutPriorityDragThatCanResizeWindow = NSLayoutPriorityDragThatCanResizeWindow;
+    static const MASLayoutPriority MASLayoutPriorityDefaultMedium = 501;
+    static const MASLayoutPriority MASLayoutPriorityWindowSizeStayPut = NSLayoutPriorityWindowSizeStayPut;
+    static const MASLayoutPriority MASLayoutPriorityDragThatCannotResizeWindow = NSLayoutPriorityDragThatCannotResizeWindow;
+    static const MASLayoutPriority MASLayoutPriorityDefaultLow = NSLayoutPriorityDefaultLow;
+    static const MASLayoutPriority MASLayoutPriorityFittingSizeCompression = NSLayoutPriorityFittingSizeCompression;
 
 #endif
 
@@ -52,15 +52,15 @@ static const MASLayoutPriority MASLayoutPriorityFittingSizeCompression = NSLayou
  *  MASAttachKeys(view1, view2);
  */
 #define MASAttachKeys(...)                                                        \
-{                                                                             \
-NSDictionary *keyPairs = NSDictionaryOfVariableBindings(__VA_ARGS__);     \
-for (id key in keyPairs.allKeys) {                                        \
-id obj = keyPairs[key];                                               \
-NSAssert([obj respondsToSelector:@selector(setMas_key:)],             \
-@"Cannot attach mas_key to %@", obj);                        \
-[obj setMas_key:key];                                                 \
-}                                                                         \
-}
+    {                                                                             \
+        NSDictionary *keyPairs = NSDictionaryOfVariableBindings(__VA_ARGS__);     \
+        for (id key in keyPairs.allKeys) {                                        \
+            id obj = keyPairs[key];                                               \
+            NSAssert([obj respondsToSelector:@selector(setMas_key:)],             \
+                     @"Cannot attach mas_key to %@", obj);                        \
+            [obj setMas_key:key];                                                 \
+        }                                                                         \
+    }
 
 /**
  *  Used to create object hashes

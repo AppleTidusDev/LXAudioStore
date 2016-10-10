@@ -181,7 +181,9 @@
 }
 
 - (void)setLayoutHeaderView {
-    UIPageControl *page=[[UIPageControl alloc] init];
+    
+    UIPageControl *page = nil;
+    page=[[UIPageControl alloc] init];
     
     page.frame = CGRectMake(0,60,self.view.frame.size.width,130);
     
@@ -210,7 +212,6 @@
     for(int i=0;i<pickerArrary.count;i++)
         
     {
-        
         UIImageView *imageView=[[UIImageView alloc] initWithImage:pickerArrary[i]];
         //图片显示形式
         

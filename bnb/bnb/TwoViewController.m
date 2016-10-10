@@ -19,6 +19,8 @@
 
 @implementation  TwoViewController
 
+
+///jr
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initData];

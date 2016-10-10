@@ -1,11 +1,10 @@
 //
 //  MASCompositeConstraint.h
-//  bnb
+//  Masonry
 //
-//  Created by 谭 卓勋 on 16/9/28.
-//  Copyright (c) 2016年 Tidus. All rights reserved.
+//  Created by Jonas Budelmann on 21/07/13.
+//  Copyright (c) 2013 cloudling. All rights reserved.
 //
-
 
 #import "MASConstraint.h"
 #import "MASUtilities.h"

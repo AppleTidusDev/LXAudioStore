@@ -1,9 +1,9 @@
 //
 //  NSArray+MASAdditions.h
-//  bnb
 //
-//  Created by 谭 卓勋 on 16/9/28.
-//  Copyright (c) 2016年 Tidus. All rights reserved.
+//
+//  Created by Daniel Hammond on 11/26/13.
+//
 //
 
 #import "MASUtilities.h"

@@ -1,16 +1,16 @@
 //
 //  MASConstraint.h
-//  bnb
+//  Masonry
 //
-//  Created by 谭 卓勋 on 16/9/28.
-//  Copyright (c) 2016年 Tidus. All rights reserved.
+//  Created by Jonas Budelmann on 22/07/13.
+//  Copyright (c) 2013 cloudling. All rights reserved.
 //
 
 #import "MASUtilities.h"
 
 /**
  *	Enables Constraints to be created with chainable syntax
- *  Constraint can represent single NSLayoutConstraint (MASViewConstraint)
+ *  Constraint can represent single NSLayoutConstraint (MASViewConstraint) 
  *  or a group of NSLayoutConstraints (MASComposisteConstraint)
  */
 @interface MASConstraint : NSObject
@@ -193,7 +193,7 @@
 #endif
 
 /**
- *  Activates an NSLayoutConstraint if it's supported by an OS.
+ *  Activates an NSLayoutConstraint if it's supported by an OS. 
  *  Invokes install otherwise.
  */
 - (void)activate;

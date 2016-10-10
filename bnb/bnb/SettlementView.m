@@ -7,7 +7,7 @@
 //
 
 #import "SettlementView.h"
-
+#import "View+MASAdditions.h"
 #import "SC.pch"
 @implementation SettlementView
 

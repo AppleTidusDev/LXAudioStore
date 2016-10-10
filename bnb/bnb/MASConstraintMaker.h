@@ -1,9 +1,9 @@
 //
-//  MASConstraintMaker.h
-//  bnb
+//  MASConstraintBuilder.h
+//  Masonry
 //
-//  Created by 谭 卓勋 on 16/9/28.
-//  Copyright (c) 2016年 Tidus. All rights reserved.
+//  Created by Jonas Budelmann on 20/07/13.
+//  Copyright (c) 2013 cloudling. All rights reserved.
 //
 
 #import "MASConstraint.h"
@@ -39,7 +39,7 @@ typedef NS_OPTIONS(NSInteger, MASAttribute) {
     MASAttributeTrailingMargin = 1 << NSLayoutAttributeTrailingMargin,
     MASAttributeCenterXWithinMargins = 1 << NSLayoutAttributeCenterXWithinMargins,
     MASAttributeCenterYWithinMargins = 1 << NSLayoutAttributeCenterYWithinMargins,
-    
+
 #endif
     
 };
