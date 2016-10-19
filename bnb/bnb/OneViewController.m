@@ -9,7 +9,7 @@
 #import "OneViewController.h"
 #import "KCContact.h"
 #import "KCContactGroup.h"
-
+#import "SuggestionViewController.h"
 @interface OneViewController ()<UISearchDisplayDelegate,UISearchBarDelegate,UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate,UIAlertViewDelegate>
 @property(strong,nonatomic)UITableView *tableView;
 @property(strong,nonatomic)NSMutableArray *contacts;//联系人模型
@@ -297,7 +297,7 @@
     shortbutton.titleLabel.textAlignment = NSTextAlignmentLeft;//设置title的字体居中
     [shortbutton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];//设置title在一般情况下为白色字体
     
-    [shortbutton addTarget:self action:@selector(tap) forControlEvents:UIControlEventTouchUpInside];
+    [shortbutton addTarget:self action:@selector(suggestionViewGO)forControlEvents:UIControlEventTouchUpInside];
     bigView.backgroundColor=[UIColor whiteColor];
     
     [bigView addSubview:page];
@@ -307,6 +307,14 @@
     self.tableView.tableHeaderView =bigView;
     
  
+}
+-(void) suggestionViewGO
+{
+    SuggestionViewController * SView = [[SuggestionViewController alloc]init];
+    SView.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    
+    [self presentViewController:SView animated:YES completion:nil];
+    //    [modalView release];
 }
 
 
