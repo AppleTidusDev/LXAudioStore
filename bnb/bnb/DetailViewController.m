@@ -35,8 +35,8 @@
     money.text=@"$559";
     
     [self.view addSubview:money];
-    [self setTabbar];
-    
+    [self setLabel];
+    [self pushTabbar];
         
 }
 
@@ -127,7 +127,7 @@
     [self.view addSubview:roundView];
 }
 
--(void)setTabbar{
+-(void)setLabel{
     UIButton *zimuhei=[UIButton buttonWithType:UIButtonTypeCustom];
     zimuhei.frame=CGRectMake(50, 450, 120, 60);
     [zimuhei setTitle:@"字母黑" forState:UIControlStateNormal];
@@ -162,6 +162,29 @@
     [NSOperationQueue.mainQueue addOperationWithBlock:^{ btn.highlighted = YES; }];
 }
 
+-(void)pushTabbar{
+    
+    UITabBar *tb=[[UITabBar alloc]initWithFrame:CGRectMake(0, 619, self.view.frame.size.width, 30)];
+    UITabBarItem *first=[[UITabBarItem alloc]initWithTitle:@"关注" image:[UIImage imageNamed:@"heart"] tag:0];
+    UITabBarItem *second=[[UITabBarItem alloc]initWithTitle:@"购物车" image:[UIImage imageNamed:@"4.png"] tag:1];
+    UITabBarItem *third=[[UITabBarItem alloc]init];
+    UITabBarItem *fourth=[[UITabBarItem alloc]init];
+    NSArray *items=[[NSArray alloc]initWithObjects:first,second,third,fourth, nil];
+    
+    tb.items=items;
+        UIButton *btn=[[UIButton alloc]initWithFrame:CGRectMake(200, 0, 180,50)];
+    btn.backgroundColor=[UIColor redColor];
+    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [btn setTitle:@"加入购物车" forState:UIControlStateNormal];
+    [tb addSubview:btn];
+    tb.barTintColor = [UIColor blackColor];
+    tb.selectedImageTintColor = [UIColor redColor];
+    
+
+    [self.view addSubview:tb];
+
+    
+}
     
 
 /*
