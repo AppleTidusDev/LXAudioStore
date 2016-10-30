@@ -7,15 +7,18 @@
 //
 
 #import "OneViewController.h"
-#import "KCContact.h"
-#import "KCContactGroup.h"
+#import "OneStatus.h"
+#import "OneTableViewCell.h"
 #import "SuggestionViewController.h"
-@interface OneViewController ()<UISearchDisplayDelegate,UISearchBarDelegate,UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate,UIAlertViewDelegate>
+#import "TalkTableViewController.h"
+@interface OneViewController ()<UISearchDisplayDelegate,UISearchBarDelegate,UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
 @property(strong,nonatomic)UITableView *tableView;
 @property(strong,nonatomic)NSMutableArray *contacts;//联系人模型
 @property (retain, nonatomic) NSMutableArray *images;
 @property (retain, nonatomic) UIScrollView *scrollView;
 @property(strong,nonatomic)UIView *searchView;
+@property(strong,nonatomic)NSMutableArray *status;
+@property(strong,nonatomic)NSMutableArray *statusCells;
 
 @end
 
@@ -38,7 +41,7 @@
     self.navigationItem.titleView =_searchView;
     
     //创建一个分组样式的UITableView
-    [self initData];
+    
     _tableView=[[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     
     //设置数据源，注意必须实现对应的UITableViewDataSource协议
@@ -59,7 +62,7 @@
         
     self.images = [[NSMutableArray alloc]initWithObjects:first,second,three, nil];
     [self.view addSubview:_tableView];
-
+    [self initData];
     [self setLayoutHeaderView];
       
 
@@ -72,55 +75,45 @@
 
 #pragma mark 加载数据
 -(void)initData{
-    _contacts=[[NSMutableArray alloc]init];
-    
-    KCContact *contact1=[KCContact initWithFirstName:@"Cui" andLastName:@"Kenshin" andPhoneNumber:@"18500131234"];
-    KCContactGroup *group1=[KCContactGroup initWithName:@"C" andButton:(UIButton*)@"" andDetail:@"With names beginning with C" andContacts:[NSMutableArray arrayWithObjects:contact1, nil]];
-    [_contacts addObject:group1];
-    
-    
-    
-    KCContact *contact2=[KCContact initWithFirstName:@"Lee" andLastName:@"Terry" andPhoneNumber:@"18500131238"];
-    
-    KCContactGroup *group2=[KCContactGroup initWithName:@"L" andButton:(UIButton*)@""  andDetail:@"With names beginning with L" andContacts:[NSMutableArray arrayWithObjects:contact2,nil]];
-    [_contacts addObject:group2];
-    
-    
-    
-    KCContact *contact3=[KCContact initWithFirstName:@"Sun" andLastName:@"Kaoru" andPhoneNumber:@"18500131235"];
-   
-    
-    KCContactGroup *group3=[KCContactGroup initWithName:@"S" andButton:(UIButton*)@""  andDetail:@"With names beginning with S" andContacts:[NSMutableArray arrayWithObjects:contact3, nil]];
-    [_contacts addObject:group3];
-    
-    
-  
-    
+    NSString *path=[[NSBundle mainBundle] pathForResource:@"One" ofType:@"plist"];
+    NSArray *array=[NSArray arrayWithContentsOfFile:path];
+    _status=[[NSMutableArray alloc]init];
+    _statusCells=[[NSMutableArray alloc]init];
+    [array enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        [_status addObject:[OneStatus statusWithDictionary:obj]];
+        OneTableViewCell *cell=[[OneTableViewCell alloc]init];
+        [_statusCells addObject:cell];
+    }];
 }
 
 #pragma mark - 数据源方法
 #pragma mark 返回分组数
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     NSLog(@"计算分组数");
-    return _contacts.count;
+    return 1;
 }
 
 #pragma mark 返回每组行数
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    KCContactGroup *group1=_contacts[section];
-    return group1.contacts.count;
+    return _status.count;
 }
 
 #pragma mark返回每行的单元格
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     //NSIndexPath是一个结构体，记录了组和行信息
 
-    KCContactGroup *group=_contacts[indexPath.section];
-    KCContact *contact=group.contacts[indexPath.row];
-    UITableViewCell *cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-    cell.textLabel.text=[contact getName];
-    cell.detailTextLabel.text=contact.phoneNumber;
+    
+    static NSString *cellIdentifier=@"UITableViewCellIdentifierKey1";
+
+    OneTableViewCell *cell;
+    cell=[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if(!cell){
+        cell=[[OneTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+    //在此设置微博，以便重新布局
+    OneStatus *status=_status[indexPath.row];
+    cell.status=status;
     cell.textLabel.textColor=[UIColor redColor];
 
     NSInteger row = [indexPath row];  //关键点之一  cell的位置
@@ -165,25 +158,33 @@
     
     UIButton *leftbutton=[[UIButton alloc]initWithFrame:CGRectMake(220, 55*row, 10, 55)];
     [leftbutton  setImage:[UIImage imageNamed:@"left.png"] forState:UIControlStateNormal];
-        [leftbutton addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventValueChanged];
+        [leftbutton addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
     [cell.contentView addSubview:leftbutton];
     
     UIButton *rightbutton=[[UIButton alloc]initWithFrame:CGRectMake(340, 55*row, 10, 55)];
     [rightbutton  setImage:[UIImage imageNamed:@"right.png"] forState:UIControlStateNormal];
-    [rightbutton addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventValueChanged];
+    [rightbutton addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
     [cell.contentView addSubview:rightbutton];
 
     return cell;
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    TalkTableViewController *tV=[[TalkTableViewController alloc]init];
+    [self.navigationController  pushViewController:tV animated:NO ];
+}
 -(void)btnClicked:(id)sender
 {
-///first change
+
+}
+
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)setLayoutHeaderView {
     
-    UIPageControl *page = nil;
-    page=[[UIPageControl alloc] init];
+    UIPageControl *page=[[UIPageControl alloc] init];
     
     page.frame = CGRectMake(0,60,self.view.frame.size.width,130);
     
@@ -314,8 +315,8 @@
     SView.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     
     [self presentViewController:SView animated:YES completion:nil];
-    //    [modalView release];
 }
+
 
 
 //设置表头高度
