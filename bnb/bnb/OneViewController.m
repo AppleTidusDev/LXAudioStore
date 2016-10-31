@@ -172,7 +172,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     TalkTableViewController *tV=[[TalkTableViewController alloc]init];
     [self.navigationController  pushViewController:tV animated:NO ];
-}
+}//跳转界面
 -(void)btnClicked:(id)sender
 {
 
