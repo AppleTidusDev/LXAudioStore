@@ -9,6 +9,7 @@
 #import "TwoViewController.h"
 #import "KCStatus.h"
 #import "KCStatusTableViewCell.h"
+#import "DetailViewController.h"
 @interface TwoViewController ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
 @property(strong,nonatomic)UITableView *tableView;
 @property(strong,nonatomic)NSMutableArray *status;
@@ -20,11 +21,9 @@
 @implementation  TwoViewController
 
 
-///jr
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initData];
-    
     //创建一个分组样式的UITableView
     _tableView=[[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     
@@ -227,16 +226,21 @@
     
 }
 
-- (void)setTitle:(NSString *)title {
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.tabBarController.tabBar.hidden=YES;    //1.设置self.tabBarController.tabBar.hidden=YES;
+    self.hidesBottomBarWhenPushed=YES;
+    DetailViewController *detailView = [[DetailViewController alloc]init];
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleBordered target:nil action:@selector(hi:)];
+    [self.navigationItem setBackBarButtonItem:backItem];
+    [self.navigationController pushViewController:detailView animated:YES];
+
+    self.hidesBottomBarWhenPushed=NO;
     
-    UILabel *titleLabel         = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 44)];
-    titleLabel.text             = title;
-    titleLabel.font             = [UIFont boldSystemFontOfSize:20.f];
-    titleLabel.textAlignment    = NSTextAlignmentCenter;
-    titleLabel.textColor        = [UIColor whiteColor];
-    self.navigationItem.titleView = titleLabel;
-    
-}
+    //2.如果在push跳转时需要隐藏tabBar，设置self.hidesBottomBarWhenPushed=YES;
+        
+}//点解哩个界面有哩个方法就可以直接跳转
+
 
 /*
 #pragma mark - Navigation
