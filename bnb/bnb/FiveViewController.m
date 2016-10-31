@@ -79,7 +79,7 @@
     rightbutton.backgroundColor=[UIColor blackColor];
     [rightbutton addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
     [cell addSubview:rightbutton];
-    
+    //添加黑色按钮
         return cell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -97,7 +97,7 @@
     DaTableViewController * SView = [[DaTableViewController alloc]init];
     SView.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [self.navigationController pushViewController:SView animated:YES];
-}
+}//按钮方法
 
 -(void)setTableHeaderView{
     UIView *bigView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
