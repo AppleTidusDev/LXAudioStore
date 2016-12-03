@@ -17,6 +17,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    NSArray *times = @[@"sun",@"mon",@"tue",@"wed",@"thr",@"fri",@"sat"];
+    NSArray *descriptions = @[@"state 1",@"state 2",@"state 3",@"state 4",@"very very long description if state 5",@"state 6",@"state 7"];
+    TimeLineViewControl *timezone = [[TimeLineViewControl alloc] initWithTimeArray:times
+                                                           andTimeDescriptionArray:descriptions
+                                                                  andCurrentStatus:4];
+    timezone. = self.view.center;
+    [self.view addSubview:timezone];
 }
 
 - (void)didReceiveMemoryWarning {

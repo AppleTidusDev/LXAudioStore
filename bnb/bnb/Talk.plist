@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>id</key>
+		<string>0</string>
+		<key>number</key>
+		<string>沙发</string>
+		<key>label</key>
+		<string>陌生人.png</string>
+		<key>name</key>
+		<string>罗小林</string>
+		<key>level</key>
+		<string>LV2</string>
+		<key>day</key>
+		<string>2015-10-16</string>
+		<key>time</key>
+		<string>22:48</string>
+		<key>title</key>
+		<string>不错。完美的外观，卓越的音质。</string>
+	</dict>
+</array>
+</plist>

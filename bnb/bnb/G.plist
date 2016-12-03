@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>text0</key>
+		<string>已签收，签收人是：［草签］</string>
+		<key>time0</key>
+		<string>2015-11-22 11：24</string>
+		<key>text1</key>
+		<string>［浙江义乌公司］的派件员［程磊］正在派件</string>
+		<key>time1</key>
+		<string>2015-11-22 11:14</string>
+		<key>text2</key>
+		<string>快件已到达［浙江义乌公司］</string>
+		<key>time2</key>
+		<string>2015-11-22 02:43</string>
+		<key>text3</key>
+		<string>由［浙江义乌中转部］发往［浙江义乌公司］</string>
+		<key>time3</key>
+		<string>2015-11-22 02:43</string>
+		<key>text4</key>
+		<string>由［广东广州公司］发往［浙江义乌中转部］</string>
+		<key>time4</key>
+		<string>2015-11-21 02:13</string>
+		<key>text5</key>
+		<string>由［广东花都新华］发往［广东广州公司］</string>
+		<key>time5</key>
+		<string>2015－11-19 23:09</string>
+		<key>text6</key>
+		<string>你的订单已交付顺丰快递，运单号为107998934964</string>
+		<key>time6</key>
+		<string>2015-11-19 18:22</string>
+		<key>text7</key>
+		<string>［广东花都新华］的收件员［谢德贵］已收件</string>
+		<key>time7</key>
+		<string>2015-11-18 23:44</string>
+		<key>text8</key>
+		<string>你提交了订单，请等候系统确认</string>
+		<key>time8</key>
+		<string>2015-11-18 16:03</string>
+		<key>hotpoint</key>
+		<string>hotpoint.png</string>
+		<key>point0</key>
+		<string>point.png</string>
+		<key>point1</key>
+		<string>point.png</string>
+		<key>point2</key>
+		<string>point.png</string>
+		<key>point3</key>
+		<string>point.png</string>
+		<key>point4</key>
+		<string>point.png</string>
+		<key>point5</key>
+		<string>point.png</string>
+		<key>point6</key>
+		<string>point.png</string>
+		<key>point7</key>
+		<string>point.png</string>
+		<key>sl0</key>
+		<string>sl.png</string>
+		<key>sl1</key>
+		<string>sl.png</string>
+		<key>sl2</key>
+		<string>sl.png</string>
+		<key>sl3</key>
+		<string>sl.png</string>
+		<key>sl4</key>
+		<string>sl.png</string>
+		<key>sl5</key>
+		<string>sl.png</string>
+		<key>sl6</key>
+		<string>sl.png</string>
+		<key>sl7</key>
+		<string>sl.png</string>
+		<key>ssl</key>
+		<string>ssl.png</string>
+	</dict>
+</array>
+</plist>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>line0</key>
+		<string>line0.png</string>
+		<key>right</key>
+		<string>查看全部订单&gt;</string>
+		<key>title</key>
+		<string>我的订单</string>
+		<key>left</key>
+		<string>leftbutton.png</string>
+		<key>id</key>
+		<string>1</string>
+		<key>p1</key>
+		<string>待付款.png</string>
+		<key>p2</key>
+		<string>待收货.png</string>
+		<key>p3</key>
+		<string>待评价.png</string>
+		<key>p4</key>
+		<string>退修.png</string>
+		<key>w1</key>
+		<string>待付款</string>
+		<key>w2</key>
+		<string>待收货</string>
+		<key>w3</key>
+		<string>待评价</string>
+		<key>w4</key>
+		<string>返修／退款</string>
+		<key>line1</key>
+		<string>line1.png</string>
+		<key>line2</key>
+		<string>line2.png</string>
+		<key>line3</key>
+		<string>line1.png</string>
+		<key>line4</key>
+		<string>line2.png</string>
+	</dict>
+</array>
+</plist>

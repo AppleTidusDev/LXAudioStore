@@ -11,7 +11,7 @@
 #import "OneTableViewCell.h"
 #import "SuggestionViewController.h"
 #import "TalkTableViewController.h"
-@interface OneViewController ()<UISearchDisplayDelegate,UISearchBarDelegate,UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
+@interface OneViewController ()<UISearchDisplayDelegate,UISearchBarDelegate,UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate,UIGestureRecognizerDelegate>
 @property(strong,nonatomic)UITableView *tableView;
 @property(strong,nonatomic)NSMutableArray *contacts;//联系人模型
 @property (retain, nonatomic) NSMutableArray *images;
@@ -46,6 +46,8 @@
     
     //设置数据源，注意必须实现对应的UITableViewDataSource协议
     _tableView.dataSource=self;
+    self.tableView.delegate=self;
+
     self.tableView.rowHeight=70;
     UIImage *first=[UIImage imageNamed:@"100.png"];
     UIImage *second=[UIImage imageNamed:@"101.png"];
@@ -90,13 +92,13 @@
 #pragma mark 返回分组数
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     NSLog(@"计算分组数");
-    return 1;
+    return 3;
 }
 
 #pragma mark 返回每组行数
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return _status.count;
+    return 1;
 }
 
 #pragma mark返回每行的单元格
@@ -118,7 +120,7 @@
 
     NSInteger row = [indexPath row];  //关键点之一  cell的位置
     
-    self.scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(230, 55*row, 110, 55)];
+    self.scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(230, 10*row, 110, 60)];
     _scrollView.delegate = self;
     _scrollView.backgroundColor=[UIColor blackColor];
     _scrollView.pagingEnabled=YES;
@@ -132,7 +134,7 @@
      [_scrollView setScrollEnabled:YES];
     //将自己设置成.delegate
     _scrollView.delegate=self;
-    CGSize size=CGSizeMake(2000,80);
+    CGSize size=CGSizeMake(200,40);
     //显示内容大小
     
     _scrollView.contentSize=size;
@@ -144,7 +146,7 @@
                 imageView.contentMode=UIViewContentModeTop;
         //图片显示范围
         
-        imageView.frame=CGRectMake(55*i ,55*row, 55,55);
+        imageView.frame=CGRectMake(55*i ,10*row, 55,60);
         
         //加到scrollView中
        
@@ -155,29 +157,65 @@
     }
     
         [cell.contentView addSubview:_scrollView];
-    
-    UIButton *leftbutton=[[UIButton alloc]initWithFrame:CGRectMake(220, 55*row, 10, 55)];
+    UIButton *leftbutton=[[UIButton alloc]initWithFrame:CGRectMake(220, 10*row, 10, 55)];
     [leftbutton  setImage:[UIImage imageNamed:@"left.png"] forState:UIControlStateNormal];
-        [leftbutton addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
-    [cell.contentView addSubview:leftbutton];
+    leftbutton.tag=1;
+        [leftbutton addTarget:self action:@selector(classItemClickListener:) forControlEvents:UIControlEventTouchUpInside];
+     leftbutton.userInteractionEnabled=YES;
     
-    UIButton *rightbutton=[[UIButton alloc]initWithFrame:CGRectMake(340, 55*row, 10, 55)];
+       [cell.contentView addSubview:leftbutton];
+
+    
+    UIButton *rightbutton=[[UIButton alloc]initWithFrame:CGRectMake(340, 10*row, 10, 55)];
     [rightbutton  setImage:[UIImage imageNamed:@"right.png"] forState:UIControlStateNormal];
-    [rightbutton addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
+    rightbutton.tag=1;
+    [rightbutton addTarget:self action:@selector(classItemClickListener:) forControlEvents:UIControlEventTouchUpInside];
     [cell.contentView addSubview:rightbutton];
 
     return cell;
 }
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    TalkTableViewController *tV=[[TalkTableViewController alloc]init];
-    [self.navigationController  pushViewController:tV animated:NO ];
-}//跳转界面
--(void)btnClicked:(id)sender
+-(void) classItemClickListener:(UIButton *)button
 {
+    int current=1;
+    
+    current= current - 1;
+   
+    CGPoint point = CGPointMake(230* current - 230, 0);
+    
+    [_scrollView setContentOffset:point animated:YES];
+}
+- (void)nextBtnTouch:(UIButton *)button {
+    int current=1;
+    current = current + 1;
 
+    CGPoint point = CGPointMake(230*current, 0);
+    
+    [_scrollView setContentOffset:point animated:YES];
+    
+    
 }
 
+-(void)pan{
+
+    NSLog(@"asds");
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    self.tabBarController.tabBar.hidden=YES;    //1.设置self.tabBarController.tabBar.hidden=YES;
+    self.hidesBottomBarWhenPushed=YES;
+    TalkViewController *tV=[[TalkViewController alloc]init];
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleBordered target:nil action:@selector(hi:)];
+    [self.navigationItem setBackBarButtonItem:backItem];
+    [self.navigationController  pushViewController:tV animated:NO ];
+    self.hidesBottomBarWhenPushed=NO;
+
+
+
+}
+//跳转界面
+-(void)hi:(id)sender{
+    
+}
 -(UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;
 }
@@ -309,12 +347,25 @@
     
  
 }
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 5;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 65;
+}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIView *headView = [[UIView alloc]init];
+    headView.backgroundColor = [UIColor clearColor];
+    return headView;
+}
 -(void) suggestionViewGO
 {
     SuggestionViewController * SView = [[SuggestionViewController alloc]init];
     SView.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     
-    [self presentViewController:SView animated:YES completion:nil];
+    [self.navigationController pushViewController:SView animated:YES];
 }
 
 

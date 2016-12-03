@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		352591781DC0F1C600D3D5EC /* Talk.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352591771DC0F1C600D3D5EC /* Talk.plist */; };
+		3525917C1DC0F59300D3D5EC /* TalkStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 3525917B1DC0F59300D3D5EC /* TalkStatus.m */; };
+		3525917F1DC1127B00D3D5EC /* TalkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3525917E1DC1127B00D3D5EC /* TalkTableViewCell.m */; };
 		353308681D9BEC7E00DBEE1A /* GoodsInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 353308671D9BEC7E00DBEE1A /* GoodsInfoModel.m */; };
 		3533086B1D9BED1B00DBEE1A /* ShopCartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3533086A1D9BED1B00DBEE1A /* ShopCartCell.m */; };
 		3533088F1D9C001D00DBEE1A /* SettlementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3533088E1D9C001D00DBEE1A /* SettlementView.m */; };
@@ -18,15 +21,32 @@
 		35413F171D826BAB003C16CD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35413F151D826BAB003C16CD /* LaunchScreen.xib */; };
 		35413F231D826BAB003C16CD /* bnbTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35413F221D826BAB003C16CD /* bnbTests.m */; };
 		35413F311D826D1C003C16CD /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35413F301D826D1C003C16CD /* OneViewController.m */; };
-		35413F341D826D2A003C16CD /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35413F331D826D2A003C16CD /* TwoViewController.m */; };
 		35413F371D826D32003C16CD /* ThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35413F361D826D32003C16CD /* ThreeViewController.m */; };
 		35413F3A1D826D3B003C16CD /* FourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35413F391D826D3B003C16CD /* FourViewController.m */; };
 		35413F3D1D826D45003C16CD /* FiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35413F3C1D826D45003C16CD /* FiveViewController.m */; };
+		355E67C31DC1CB3000E53D53 /* TalkTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355E67C21DC1CB3000E53D53 /* TalkTableViewController.m */; };
 		3564D0B11D979D3D0057DA05 /* StatusInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3564D0B01D979D3D0057DA05 /* StatusInfo.plist */; };
 		3564D0B71D97A4BF0057DA05 /* KCStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 3564D0B61D97A4BF0057DA05 /* KCStatus.m */; };
 		3564D0BA1D97A6D10057DA05 /* KCStatusTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3564D0B91D97A6D10057DA05 /* KCStatusTableViewCell.m */; };
+		356CB7AF1DB0E43800FE6388 /* five.plist in Resources */ = {isa = PBXBuildFile; fileRef = 356CB7AE1DB0E43800FE6388 /* five.plist */; };
+		356CB7B51DB0EF5F00FE6388 /* FiveStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 356CB7B41DB0EF5F00FE6388 /* FiveStatus.m */; };
+		356CB7BB1DB0F1BC00FE6388 /* FiveStatusTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 356CB7BA1DB0F1BC00FE6388 /* FiveStatusTableViewCell.m */; };
 		356D10A31D9178320064DD8A /* KCContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 356D10A21D9178320064DD8A /* KCContact.m */; };
 		356D10A61D9178B90064DD8A /* KCContactGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 356D10A51D9178B90064DD8A /* KCContactGroup.m */; };
+		35729DD51DB795E400888FDE /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35729DD41DB795E400888FDE /* DetailViewController.m */; };
+		357DFBF81DC8622C005A7097 /* G.plist in Resources */ = {isa = PBXBuildFile; fileRef = 357DFBF71DC8622C005A7097 /* G.plist */; };
+		357DFBFB1DC8668F005A7097 /* G.m in Sources */ = {isa = PBXBuildFile; fileRef = 357DFBFA1DC8668F005A7097 /* G.m */; };
+		357DFBFE1DC868C0005A7097 /* GTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 357DFBFD1DC868C0005A7097 /* GTableViewCell.m */; };
+		357DFC011DC87C4B005A7097 /* GTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 357DFC001DC87C4A005A7097 /* GTableViewController.m */; };
+		357ECD801DE536D500EA97B5 /* fsUIScorllView.m in Sources */ = {isa = PBXBuildFile; fileRef = 357ECD7F1DE536D500EA97B5 /* fsUIScorllView.m */; };
+		35C2B0F61DC46849001F1BCC /* Wait.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35C2B0F51DC46849001F1BCC /* Wait.plist */; };
+		35C2B0FC1DC46AA6001F1BCC /* DaStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C2B0FB1DC46AA6001F1BCC /* DaStatus.m */; };
+		35C2B0FF1DC46D09001F1BCC /* DaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C2B0FE1DC46D09001F1BCC /* DaTableViewCell.m */; };
+		35C2B1021DC47068001F1BCC /* DaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C2B1011DC47068001F1BCC /* DaTableViewController.m */; };
+		35C2B10B1DC491A6001F1BCC /* OneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C2B1061DC491A6001F1BCC /* OneTableViewCell.m */; };
+		35C2B10C1DC491A6001F1BCC /* OneStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C2B1091DC491A6001F1BCC /* OneStatus.m */; };
+		35C2B10D1DC491A6001F1BCC /* One.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35C2B10A1DC491A6001F1BCC /* One.plist */; };
+		35DC97641DC7016100A12CCF /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35DC97631DC7016100A12CCF /* TwoViewController.m */; };
 		35F48F951DA22B9B00795650 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F48F8A1DA22B9A00795650 /* MASCompositeConstraint.m */; };
 		35F48F961DA22B9B00795650 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F48F8B1DA22B9A00795650 /* MASConstraint.m */; };
 		35F48F971DA22B9B00795650 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F48F8D1DA22B9A00795650 /* MASConstraintMaker.m */; };
@@ -37,6 +57,7 @@
 		35F48F9C1DA22B9B00795650 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F48F921DA22B9B00795650 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		35F48F9D1DA22B9B00795650 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F48F931DA22B9B00795650 /* View+MASAdditions.m */; };
 		35F48F9E1DA22B9B00795650 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F48F941DA22B9B00795650 /* ViewController+MASAdditions.m */; };
+		35FA6CCB1DB740B800F4D468 /* SuggestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FA6CCA1DB740B800F4D468 /* SuggestionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +71,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		352591771DC0F1C600D3D5EC /* Talk.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Talk.plist; sourceTree = "<group>"; };
+		3525917A1DC0F59300D3D5EC /* TalkStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkStatus.h; sourceTree = "<group>"; };
+		3525917B1DC0F59300D3D5EC /* TalkStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TalkStatus.m; sourceTree = "<group>"; };
+		3525917D1DC1127B00D3D5EC /* TalkTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkTableViewCell.h; sourceTree = "<group>"; };
+		3525917E1DC1127B00D3D5EC /* TalkTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TalkTableViewCell.m; sourceTree = "<group>"; };
 		353308661D9BEC7E00DBEE1A /* GoodsInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsInfoModel.h; sourceTree = "<group>"; };
 		353308671D9BEC7E00DBEE1A /* GoodsInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsInfoModel.m; sourceTree = "<group>"; };
 		353308691D9BED1B00DBEE1A /* ShopCartCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopCartCell.h; sourceTree = "<group>"; };
@@ -89,22 +115,52 @@
 		35413F2F1D826D1C003C16CD /* OneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneViewController.h; sourceTree = "<group>"; };
 		35413F301D826D1C003C16CD /* OneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneViewController.m; sourceTree = "<group>"; wrapsLines = 1; };
 		35413F321D826D2A003C16CD /* TwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
-		35413F331D826D2A003C16CD /* TwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
 		35413F351D826D32003C16CD /* ThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeViewController.h; sourceTree = "<group>"; };
 		35413F361D826D32003C16CD /* ThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreeViewController.m; sourceTree = "<group>"; };
 		35413F381D826D3B003C16CD /* FourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourViewController.h; sourceTree = "<group>"; };
 		35413F391D826D3B003C16CD /* FourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourViewController.m; sourceTree = "<group>"; };
 		35413F3B1D826D45003C16CD /* FiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiveViewController.h; sourceTree = "<group>"; };
 		35413F3C1D826D45003C16CD /* FiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiveViewController.m; sourceTree = "<group>"; };
+		355E67C11DC1CB3000E53D53 /* TalkTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkTableViewController.h; sourceTree = "<group>"; };
+		355E67C21DC1CB3000E53D53 /* TalkTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TalkTableViewController.m; sourceTree = "<group>"; };
 		3564D0B01D979D3D0057DA05 /* StatusInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = StatusInfo.plist; path = ../StatusInfo.plist; sourceTree = "<group>"; };
 		3564D0B51D97A4BF0057DA05 /* KCStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCStatus.h; sourceTree = "<group>"; };
 		3564D0B61D97A4BF0057DA05 /* KCStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCStatus.m; sourceTree = "<group>"; };
 		3564D0B81D97A6D10057DA05 /* KCStatusTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCStatusTableViewCell.h; sourceTree = "<group>"; };
 		3564D0B91D97A6D10057DA05 /* KCStatusTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCStatusTableViewCell.m; sourceTree = "<group>"; };
+		356CB7AE1DB0E43800FE6388 /* five.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = five.plist; sourceTree = "<group>"; };
+		356CB7B31DB0EF5F00FE6388 /* FiveStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiveStatus.h; sourceTree = "<group>"; };
+		356CB7B41DB0EF5F00FE6388 /* FiveStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiveStatus.m; sourceTree = "<group>"; };
+		356CB7B91DB0F1BC00FE6388 /* FiveStatusTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiveStatusTableViewCell.h; sourceTree = "<group>"; };
+		356CB7BA1DB0F1BC00FE6388 /* FiveStatusTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiveStatusTableViewCell.m; sourceTree = "<group>"; };
 		356D10A11D9178320064DD8A /* KCContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCContact.h; sourceTree = "<group>"; };
 		356D10A21D9178320064DD8A /* KCContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCContact.m; sourceTree = "<group>"; };
 		356D10A41D9178B90064DD8A /* KCContactGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCContactGroup.h; sourceTree = "<group>"; };
 		356D10A51D9178B90064DD8A /* KCContactGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCContactGroup.m; sourceTree = "<group>"; };
+		35729DD31DB795E400888FDE /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		35729DD41DB795E400888FDE /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		357DFBF71DC8622C005A7097 /* G.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = G.plist; sourceTree = "<group>"; };
+		357DFBF91DC8668F005A7097 /* G.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G.h; sourceTree = "<group>"; };
+		357DFBFA1DC8668F005A7097 /* G.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = G.m; sourceTree = "<group>"; };
+		357DFBFC1DC868C0005A7097 /* GTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTableViewCell.h; sourceTree = "<group>"; };
+		357DFBFD1DC868C0005A7097 /* GTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTableViewCell.m; sourceTree = "<group>"; };
+		357DFBFF1DC87C4A005A7097 /* GTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTableViewController.h; sourceTree = "<group>"; };
+		357DFC001DC87C4A005A7097 /* GTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTableViewController.m; sourceTree = "<group>"; };
+		357ECD7E1DE536D500EA97B5 /* fsUIScorllView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fsUIScorllView.h; sourceTree = "<group>"; };
+		357ECD7F1DE536D500EA97B5 /* fsUIScorllView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fsUIScorllView.m; sourceTree = "<group>"; };
+		35C2B0F51DC46849001F1BCC /* Wait.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Wait.plist; sourceTree = "<group>"; };
+		35C2B0FA1DC46AA6001F1BCC /* DaStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaStatus.h; sourceTree = "<group>"; };
+		35C2B0FB1DC46AA6001F1BCC /* DaStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaStatus.m; sourceTree = "<group>"; };
+		35C2B0FD1DC46D09001F1BCC /* DaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaTableViewCell.h; sourceTree = "<group>"; };
+		35C2B0FE1DC46D09001F1BCC /* DaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaTableViewCell.m; sourceTree = "<group>"; };
+		35C2B1001DC47068001F1BCC /* DaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaTableViewController.h; sourceTree = "<group>"; };
+		35C2B1011DC47068001F1BCC /* DaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaTableViewController.m; sourceTree = "<group>"; };
+		35C2B1061DC491A6001F1BCC /* OneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OneTableViewCell.m; path = ../../../../.Trash/OneTableViewCell.m; sourceTree = "<group>"; };
+		35C2B1071DC491A6001F1BCC /* OneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OneTableViewCell.h; path = ../../../../.Trash/OneTableViewCell.h; sourceTree = "<group>"; };
+		35C2B1081DC491A6001F1BCC /* OneStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OneStatus.h; path = ../../../../.Trash/OneStatus.h; sourceTree = "<group>"; };
+		35C2B1091DC491A6001F1BCC /* OneStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OneStatus.m; path = ../../../../.Trash/OneStatus.m; sourceTree = "<group>"; };
+		35C2B10A1DC491A6001F1BCC /* One.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = One.plist; path = ../../../../.Trash/One.plist; sourceTree = "<group>"; };
+		35DC97631DC7016100A12CCF /* TwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
 		35F48F8A1DA22B9A00795650 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
 		35F48F8B1DA22B9A00795650 /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
 		35F48F8C1DA22B9A00795650 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -116,6 +172,8 @@
 		35F48F921DA22B9B00795650 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
 		35F48F931DA22B9B00795650 /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
 		35F48F941DA22B9B00795650 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		35FA6CC91DB740B800F4D468 /* SuggestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuggestionViewController.h; sourceTree = "<group>"; };
+		35FA6CCA1DB740B800F4D468 /* SuggestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuggestionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +215,8 @@
 		35413F051D826BAB003C16CD /* bnb */ = {
 			isa = PBXGroup;
 			children = (
+				357ECD7D1DE5367800EA97B5 /* UIScorllerView */,
+				357DFBF61DC8620C005A7097 /* 跟踪 */,
 				35842E281DABE320007A1CA8 /* FiveViewController */,
 				35842E271DABE315007A1CA8 /* FourViewController */,
 				35842E261DABE311007A1CA8 /* ThreeViewController */,
@@ -200,6 +260,29 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		357DFBF61DC8620C005A7097 /* 跟踪 */ = {
+			isa = PBXGroup;
+			children = (
+				357DFBF71DC8622C005A7097 /* G.plist */,
+				357DFBF91DC8668F005A7097 /* G.h */,
+				357DFBFA1DC8668F005A7097 /* G.m */,
+				357DFBFC1DC868C0005A7097 /* GTableViewCell.h */,
+				357DFBFD1DC868C0005A7097 /* GTableViewCell.m */,
+				357DFBFF1DC87C4A005A7097 /* GTableViewController.h */,
+				357DFC001DC87C4A005A7097 /* GTableViewController.m */,
+			);
+			name = "跟踪";
+			sourceTree = "<group>";
+		};
+		357ECD7D1DE5367800EA97B5 /* UIScorllerView */ = {
+			isa = PBXGroup;
+			children = (
+				357ECD7E1DE536D500EA97B5 /* fsUIScorllView.h */,
+				357ECD7F1DE536D500EA97B5 /* fsUIScorllView.m */,
+			);
+			name = UIScorllerView;
+			sourceTree = "<group>";
+		};
 		35842E231DABE305007A1CA8 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,12 +293,26 @@
 		35842E241DABE30A007A1CA8 /* FirstViewController */ = {
 			isa = PBXGroup;
 			children = (
+				352591771DC0F1C600D3D5EC /* Talk.plist */,
+				3525917A1DC0F59300D3D5EC /* TalkStatus.h */,
+				3525917B1DC0F59300D3D5EC /* TalkStatus.m */,
+				3525917D1DC1127B00D3D5EC /* TalkTableViewCell.h */,
+				3525917E1DC1127B00D3D5EC /* TalkTableViewCell.m */,
+				355E67C11DC1CB3000E53D53 /* TalkTableViewController.h */,
+				355E67C21DC1CB3000E53D53 /* TalkTableViewController.m */,
 				35413F2F1D826D1C003C16CD /* OneViewController.h */,
 				35413F301D826D1C003C16CD /* OneViewController.m */,
 				356D10A11D9178320064DD8A /* KCContact.h */,
 				356D10A21D9178320064DD8A /* KCContact.m */,
 				356D10A41D9178B90064DD8A /* KCContactGroup.h */,
 				356D10A51D9178B90064DD8A /* KCContactGroup.m */,
+				35FA6CC91DB740B800F4D468 /* SuggestionViewController.h */,
+				35FA6CCA1DB740B800F4D468 /* SuggestionViewController.m */,
+				35C2B1061DC491A6001F1BCC /* OneTableViewCell.m */,
+				35C2B1071DC491A6001F1BCC /* OneTableViewCell.h */,
+				35C2B1081DC491A6001F1BCC /* OneStatus.h */,
+				35C2B1091DC491A6001F1BCC /* OneStatus.m */,
+				35C2B10A1DC491A6001F1BCC /* One.plist */,
 			);
 			name = FirstViewController;
 			sourceTree = "<group>";
@@ -224,12 +321,14 @@
 			isa = PBXGroup;
 			children = (
 				35413F321D826D2A003C16CD /* TwoViewController.h */,
-				35413F331D826D2A003C16CD /* TwoViewController.m */,
+				35DC97631DC7016100A12CCF /* TwoViewController.m */,
 				3564D0B51D97A4BF0057DA05 /* KCStatus.h */,
 				3564D0B61D97A4BF0057DA05 /* KCStatus.m */,
 				3564D0B81D97A6D10057DA05 /* KCStatusTableViewCell.h */,
 				3564D0B91D97A6D10057DA05 /* KCStatusTableViewCell.m */,
 				3564D0B01D979D3D0057DA05 /* StatusInfo.plist */,
+				35729DD31DB795E400888FDE /* DetailViewController.h */,
+				35729DD41DB795E400888FDE /* DetailViewController.m */,
 			);
 			name = TwoViewController;
 			sourceTree = "<group>";
@@ -292,6 +391,18 @@
 			children = (
 				35413F3B1D826D45003C16CD /* FiveViewController.h */,
 				35413F3C1D826D45003C16CD /* FiveViewController.m */,
+				356CB7AE1DB0E43800FE6388 /* five.plist */,
+				356CB7B31DB0EF5F00FE6388 /* FiveStatus.h */,
+				356CB7B41DB0EF5F00FE6388 /* FiveStatus.m */,
+				356CB7B91DB0F1BC00FE6388 /* FiveStatusTableViewCell.h */,
+				356CB7BA1DB0F1BC00FE6388 /* FiveStatusTableViewCell.m */,
+				35C2B0F51DC46849001F1BCC /* Wait.plist */,
+				35C2B0FA1DC46AA6001F1BCC /* DaStatus.h */,
+				35C2B0FB1DC46AA6001F1BCC /* DaStatus.m */,
+				35C2B0FD1DC46D09001F1BCC /* DaTableViewCell.h */,
+				35C2B0FE1DC46D09001F1BCC /* DaTableViewCell.m */,
+				35C2B1001DC47068001F1BCC /* DaTableViewController.h */,
+				35C2B1011DC47068001F1BCC /* DaTableViewController.m */,
 			);
 			name = FiveViewController;
 			sourceTree = "<group>";
@@ -376,9 +487,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				357DFBF81DC8622C005A7097 /* G.plist in Resources */,
 				35413F171D826BAB003C16CD /* LaunchScreen.xib in Resources */,
 				35413F141D826BAB003C16CD /* Images.xcassets in Resources */,
+				356CB7AF1DB0E43800FE6388 /* five.plist in Resources */,
+				35C2B0F61DC46849001F1BCC /* Wait.plist in Resources */,
+				352591781DC0F1C600D3D5EC /* Talk.plist in Resources */,
 				3564D0B11D979D3D0057DA05 /* StatusInfo.plist in Resources */,
+				35C2B10D1DC491A6001F1BCC /* One.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,30 +512,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35DC97641DC7016100A12CCF /* TwoViewController.m in Sources */,
 				35413F3D1D826D45003C16CD /* FiveViewController.m in Sources */,
 				35F48F9A1DA22B9B00795650 /* MASViewConstraint.m in Sources */,
+				357DFBFB1DC8668F005A7097 /* G.m in Sources */,
 				3533086B1D9BED1B00DBEE1A /* ShopCartCell.m in Sources */,
+				35C2B0FC1DC46AA6001F1BCC /* DaStatus.m in Sources */,
 				35F48F961DA22B9B00795650 /* MASConstraint.m in Sources */,
 				356D10A31D9178320064DD8A /* KCContact.m in Sources */,
+				35729DD51DB795E400888FDE /* DetailViewController.m in Sources */,
+				35C2B0FF1DC46D09001F1BCC /* DaTableViewCell.m in Sources */,
 				356D10A61D9178B90064DD8A /* KCContactGroup.m in Sources */,
 				3533088F1D9C001D00DBEE1A /* SettlementView.m in Sources */,
+				357DFC011DC87C4B005A7097 /* GTableViewController.m in Sources */,
 				3564D0BA1D97A6D10057DA05 /* KCStatusTableViewCell.m in Sources */,
 				35F48F9E1DA22B9B00795650 /* ViewController+MASAdditions.m in Sources */,
 				35F48F9D1DA22B9B00795650 /* View+MASAdditions.m in Sources */,
+				35C2B1021DC47068001F1BCC /* DaTableViewController.m in Sources */,
 				35413F371D826D32003C16CD /* ThreeViewController.m in Sources */,
 				35F48F991DA22B9B00795650 /* MASViewAttribute.m in Sources */,
+				35C2B10B1DC491A6001F1BCC /* OneTableViewCell.m in Sources */,
 				35413F3A1D826D3B003C16CD /* FourViewController.m in Sources */,
 				353308921D9C014400DBEE1A /* StatementViewController.m in Sources */,
 				3564D0B71D97A4BF0057DA05 /* KCStatus.m in Sources */,
+				35FA6CCB1DB740B800F4D468 /* SuggestionViewController.m in Sources */,
 				35F48F951DA22B9B00795650 /* MASCompositeConstraint.m in Sources */,
 				35F48F981DA22B9B00795650 /* MASLayoutConstraint.m in Sources */,
 				35413F311D826D1C003C16CD /* OneViewController.m in Sources */,
 				35413F0F1D826BAB003C16CD /* ViewController.m in Sources */,
 				35F48F971DA22B9B00795650 /* MASConstraintMaker.m in Sources */,
+				355E67C31DC1CB3000E53D53 /* TalkTableViewController.m in Sources */,
+				3525917C1DC0F59300D3D5EC /* TalkStatus.m in Sources */,
 				35F48F9B1DA22B9B00795650 /* NSArray+MASAdditions.m in Sources */,
+				356CB7BB1DB0F1BC00FE6388 /* FiveStatusTableViewCell.m in Sources */,
 				353308681D9BEC7E00DBEE1A /* GoodsInfoModel.m in Sources */,
-				35413F341D826D2A003C16CD /* TwoViewController.m in Sources */,
+				35C2B10C1DC491A6001F1BCC /* OneStatus.m in Sources */,
+				3525917F1DC1127B00D3D5EC /* TalkTableViewCell.m in Sources */,
+				356CB7B51DB0EF5F00FE6388 /* FiveStatus.m in Sources */,
 				35413F0C1D826BAB003C16CD /* AppDelegate.m in Sources */,
+				357ECD801DE536D500EA97B5 /* fsUIScorllView.m in Sources */,
+				357DFBFE1DC868C0005A7097 /* GTableViewCell.m in Sources */,
 				35413F091D826BAB003C16CD /* main.m in Sources */,
 				35F48F9C1DA22B9B00795650 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 			);

@@ -14,7 +14,6 @@
 @property(strong,nonatomic)UITableView *tableView;
 @property(strong,nonatomic)NSMutableArray *status;
 @property(strong,nonatomic)NSMutableArray *statusCells;
-
 @end
 
 @implementation FiveViewController
@@ -26,7 +25,6 @@
     // Do any additional setup after loading the view.
     //创建一个分组样式的UITableView
     _tableView=[[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
-    
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     self.navigationItem.title = @"我的";
     //设置数据源，注意必须实现对应的UITableViewDataSource协议
@@ -63,7 +61,6 @@
     
     return _status.count;
 }
-
 #pragma mark返回每行的单元格
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *cellIdentifier=@"UITableViewCellIdentifierKey1";
@@ -71,14 +68,17 @@
     cell=[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if(!cell){
         cell=[[FiveStatusTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
-    //在此设置微博，以便重新布局
+    
     FiveStatus *status=_status[indexPath.row];
     cell.status=status;
     UIButton *rightbutton=[[UIButton alloc]initWithFrame:CGRectMake(340, 55, 10, 55)];
     rightbutton.backgroundColor=[UIColor blackColor];
+    rightbutton.tag=indexPath.row;
     [rightbutton addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
     [cell addSubview:rightbutton];
+    
     //添加黑色按钮
         return cell;
 }
@@ -94,10 +94,10 @@
 }
 -(void)btnClicked:(UIButton*)btn
 {
-    DaTableViewController * SView = [[DaTableViewController alloc]init];
-    SView.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    DaViewController * SView = [[DaViewController alloc]init];
+   
     [self.navigationController pushViewController:SView animated:YES];
-}//按钮方法
+}//黑色按钮方法
 
 -(void)setTableHeaderView{
     UIView *bigView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
@@ -169,6 +169,7 @@
 
     
 }
+
 
 /*
 #pragma mark - Navigation

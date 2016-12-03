@@ -7,6 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "fsUIScorllView.h"
+@interface OneViewController : UIViewController <UIScrollViewDelegate>
+{
+    NSMutableArray *classArray;
+    fsUIScrollView *classScrollView;
+}
+@property(nonatomic,strong) NSMutableArray *classArray;
+@property(nonatomic,strong) fsUIScrollView *classScrollView;
 
-@interface OneViewController : UIViewController
 @end

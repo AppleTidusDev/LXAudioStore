@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>蓝弦</string>
+		<key>statu</key>
+		<string>等待出货</string>
+		<key>add</key>
+		<string>广州市顺丰快递收货，快递单号［107998935964］</string>
+		<key>day</key>
+		<string>2015-11-12</string>
+		<key>time</key>
+		<string>12:06:34</string>
+		<key>pro</key>
+		<string>pro.png</string>
+		<key>detail</key>
+		<string>蓝弦a新品时尚韧性头戴式蓝牙耳机发烧hifi耳麦</string>
+		<key>money</key>
+		<string>实付款：</string>
+		<key>pay</key>
+		<string>$559.00</string>
+		<key>sa</key>
+		<string>sa.png</string>
+	</dict>
+</array>
+</plist>

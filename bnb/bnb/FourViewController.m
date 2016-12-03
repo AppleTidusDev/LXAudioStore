@@ -29,6 +29,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     //    self.view.backgroundColor=[UIColor colorWithRed:234/255.0 green:234/255.0 blue:234/255.0 alpha:1];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    self.navigationItem.title = @"购物车";
     [self setInfo];
     [self setGoodsTableView];
     [self setupSettlement];
@@ -193,7 +195,7 @@
         }
     }
     //给总价文本赋值
-    self.settlementView.sumLab.text = [NSString stringWithFormat:@"%ld 元",(long)self.allPrice];
+    self.settlementView.sumLab.text = [NSString stringWithFormat:@"合计：%ld 元",(long)self.allPrice];
     self.settlementView.goodsNumLab.text=[NSString stringWithFormat:@"共计：%ld　件商品 ",(long)self.goodsNum];
     //每次算完要重置为0，因为每次的都是全部循环算一遍
     self.allPrice = 0;

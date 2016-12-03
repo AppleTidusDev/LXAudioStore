@@ -8,6 +8,14 @@
 
 #import "ShopCartCell.h"
 #import "SC.pch"
+
+
+@interface ShopCartCell ()
+
+@property (nonatomic) BOOL firstLayout;
+
+@end
+
 @implementation ShopCartCell
 
 - (void)awakeFromNib {
@@ -24,6 +32,8 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        
+        _firstLayout = YES;
         //        self.layer.borderColor = [UIColor redColor].CGColor;
         //        self.layer.borderWidth = 1;
         [self setSelectionStyle:UITableViewCellSelectionStyleNone];
@@ -193,6 +203,10 @@
 -(void)layoutSubviews
 {
     [super layoutSubviews];
+    
+    if (!_firstLayout) {
+        return;
+    }
     WEAKSELF(weakSelf);
     [self.mainView mas_makeConstraints:^(MASConstraintMaker *make) {
         //        make.center.mas_equalTo(weakSelf).offset(0);
@@ -283,6 +297,7 @@
         make.left.mas_equalTo(weakSelf.minusBtn.mas_right).offset(10);
         make.height.mas_equalTo(weakSelf.minusBtn);
     }];
+    _firstLayout = NO;
 }
 
 @end
